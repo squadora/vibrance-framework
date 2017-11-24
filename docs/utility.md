@@ -45,8 +45,8 @@ Apply the classes in the table below to change the CSS display property of an el
 | Class | Description |
 | ------ | ------- |
 | ```.inline-block```| Applies the inline-block CSS property. |
-| ```.display-block``` | Applies 90% viewport height. |
-| ```.display-inline``` | Applies 80% viewport height. |
+| ```.display-block``` | Applies the display-block CSS property.. |
+| ```.display-inline``` | Applies the display-inline CSS property.. |
 
 ## Content alignment
 
@@ -54,9 +54,9 @@ The classes in the table below are used to align text.
 
 | Class | Description |
 | ------ | ------- |
-| ```.text-left``` | Applies the inline-block CSS property. |
-| ```.text-center``` | Applies 90% viewport height. |
-| ```.text-right``` | Applies 80% viewport height. |
+| ```.text-left``` | Apply text alignment to the left. |
+| ```.text-center``` | Apply text alignment to the center. |
+| ```.text-right``` | Apply text alignment to the right. |
 
 If you want to align any type of content, use the ```.center-all``` class.
 
@@ -162,5 +162,3 @@ Apply the classes in the table below to change the position of an element.
 | ```.position-bottom-left```| Place the element to the bottom left. |
 | ```.position-bottom-center```| Place the element to the bottom center. |
 | ```.position-bottom-right```| Place the element to the bottom right. |
-
-

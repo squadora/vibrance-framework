@@ -1,0 +1,39 @@
+{
+  "name": "vibrance-framework",
+  "title": "Vibrance Framework",
+  "version": "1.0.0",
+  "description": "A lightweight modern and responsive CSS framework",
+  "author": "Squadora Systems",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squadora/vibrance-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/squadora/vibrance-framework/issues"
+  },
+  "homepage": "https://systems.squadora.com/vibrance/framework",
+  "main": "dist/js/vibrance-framework.js",
+  "style": "dist/css/vibrance-framework.css",
+  "scripts": {
+    "compile": "npm run compile-js && npm run compile-sass && npm run compile-sass-colors",
+    "compile-js": "webpack",
+    "compile-sass": "node-sass src/scss/vibrance-framework.scss dist/css/vibrance-framework.css",
+    "compile-sass-colors": "node-sass src/scss/colors.scss dist/css/colors.css",
+    "minify": "npm run clean-css && npm run clean-css-colors && npm run clean-js",
+    "clean-css": "cleancss -o dist/css/vibrance-framework.min.css dist/css/vibrance-framework.css",
+    "clean-css-colors": "cleancss -o dist/css/colors.min.css dist/css/colors.css",
+    "clean-js": "uglifyjs dist/js/vibrance-framework.js > dist/js/vibrance-framework.min.js",
+    "build": "npm run compile && npm run minify",
+    "watch-js": "webpack -w",
+    "watch-sass": "node-sass src/scss/vibrance-framework.scss dist/css/vibrance-framework.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^4.1.10",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "uglify-js": "^3.1.6",
+    "webpack": "^3.8.1"
+  }
+}

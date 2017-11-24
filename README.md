@@ -44,7 +44,7 @@ This project use the [Semantic Versioning Specification (SemVer)](http://semver.
 
 Code licensed under the [MIT license](LICENSE.md).
 
-### Resource Licensing (media used in test and docs)
+### Resource Licensing (medias used in test files and docs)
 
 - [Big Buck Bunny](https://peach.blender.org/about/)
 - [Unsplash](https://unsplash.com/about)

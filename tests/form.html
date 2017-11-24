@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form - Vibrance Framework</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../dist/css/vibrance-framework.css" rel="stylesheet" type="text/css"/>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="margin-top-large margin-bottom-large">
+        <div class="container">
+            <div class="margin-top-large margin-30">
+                <button id="demo-shape-squared" class="button button-default">Shape squared</button>
+                <button id="demo-shape-default" class="button button-default">Shape Default</button>
+                <button id="demo-shape-rounded" class="button button-default">Shape Rounded</button>
+                <button id="demo-size-small" class="button button-default">Size Small</button>
+                <button id="demo-size-default" class="button button-default">Size Default</button>
+                <button id="demo-size-large" class="button button-default">Size Large</button>
+            </div>
+            <div class="grid">
+                <div class="column md-6">
+                    <form>
+                        <fieldset>
+                            <legend class="form-legend">Legend</legend>
+                            <div class="margin-20">
+                                <input class="input" type="text" placeholder="Input text">
+                            </div>
+                            <div class="margin-20">
+                                <textarea class="textarea" rows="6" placeholder="Textarea"></textarea>
+                            </div>
+                            <div class="margin-20">
+                                <select class="select">
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                            <div class="margin-20">
+                                <div class="inline-block width-10">
+                                    <input id="radio1" class="radio" name="radio" checked="" type="radio">
+                                    <label class="radio-label" for="radio1">A</label>
+                                </div>
+                                <div class="inline-block width-10">
+                                    <input id="radio2" class="radio" name="radio" type="radio">
+                                    <label class="radio-label" for="radio2">B</label>
+                                </div>
+                            </div>
+                            <div class="margin-20">
+                                <div class="inline-block width-10">
+                                    <input id="checkbox1" class="checkbox" name="checkbox" checked="" type="checkbox">
+                                    <label class="checkbox-label" for="checkbox1">A</label>
+                                </div>
+                                <div class="inline-block width-10">
+                                    <input id="checkbox2" class="checkbox" name="checkbox" checked="" type="checkbox">
+                                    <label class="checkbox-label" for="checkbox2">B</label>
+                                </div>
+                            </div>
+                            <div class="margin-20">
+                                <input class="range" type="range" min="0" max="100" step="1">
+                            </div>
+                            <div class="margin-20">
+                                <label class="iconfield">
+                                    <i class="fa fa-at icon"></i>
+                                    <input class="input" placeholder="Field" type="text">
+                                </label>
+                            </div>
+                            <div class="margin-20">
+                                <div class="merged-form">
+                                    <div class="grid grid-spacing-off">
+                                        <div class="column xs-12 md-8">
+                                            <input class="input" placeholder="Input" type="text">
+                                        </div>
+                                        <div class="column">
+                                            <button class="button button-primary">Button</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin-20">
+                                <div class="file-form">
+                                    <span class="button button-primary">Select File
+                                        <input type="file">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="margin-20">
+                                <div class="merged-form file-form">
+                                    <div class="grid grid-spacing-off">
+                                        <div class="column xs-12 md-8">
+                                            <input class="input" placeholder="Select a file" type="text" disabled>
+                                        </div>
+                                        <div class="column">
+                                            <span class="button button-primary">Upload
+                                                <input type="file">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin-20">
+                                <input class="input form-success" type="text" placeholder="Input text">
+                            </div>
+                            <div class="margin-20">
+                                <input class="input form-danger" type="text" placeholder="Input text">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script>
+
+            function prevent(element) {
+
+                if ( element.hasClass('merged-form') || element.hasClass('file-form') ) {
+                    return false;
+                }
+
+                if ( element.closest('.merged-form').length > 0 || element.closest('.file-form').length > 0 ) {
+                    return true;
+                }
+
+                return false;
+
+            }
+
+            (function($){
+
+                var shape_forms = 'form-squared form-rounded';
+                var size_forms = 'form-small form-large';
+                var targets = '.merged-form, .file-form, .input, .select, .textarea';
+
+                $( '#demo-shape-squared' ).click(function(e){
+                    e.preventDefault();
+
+                    $( targets ).each(function(){
+                        if ( !prevent( $(this) ) ) {
+
+                            $(this).removeClass( shape_forms ).addClass( 'form-squared' );
+
+                        }
+                    });
+
+                    return false;
+                });
+
+                $( '#demo-shape-default' ).click(function(e){
+                    e.preventDefault();
+
+                    $( targets ).each(function(){
+                        if ( !prevent( $(this) ) ) {
+
+                            $(this).removeClass( shape_forms );
+
+                        }
+                    });
+
+                    return false;
+                });
+
+                $( '#demo-shape-rounded' ).click(function(e){
+                    e.preventDefault();
+
+                    $( targets ).each(function(){
+                        if ( !prevent( $(this) ) ) {
+
+                            $(this).removeClass( shape_forms ).addClass( 'form-rounded' );
+
+                        }
+                    });
+
+                    return false;
+                });
+
+                $( '#demo-size-small' ).click(function(e){
+                    e.preventDefault();
+
+                    $( targets ).each(function(){
+                        if ( !prevent( $(this) ) ) {
+
+                            $(this).removeClass( size_forms ).addClass( 'form-small' );
+
+                        }
+                    });
+
+                    return false;
+                });
+
+                $( '#demo-size-default' ).click(function(e){
+                    e.preventDefault();
+
+                    $( targets ).each(function(){
+                        if ( !prevent( $(this) ) ) {
+
+                            $(this).removeClass( size_forms );
+
+                        }
+                    });
+
+                    return false;
+                });
+
+                $( '#demo-size-large' ).click(function(e){
+                    e.preventDefault();
+
+                    $( targets ).each(function(){
+                        if ( !prevent( $(this) ) ) {
+
+                            $(this).removeClass( size_forms ).addClass( 'form-large' );
+
+                        }
+                    });
+
+                    return false;
+                });
+
+            })(jQuery);
+            
+        </script>
+    </body>
+</html>

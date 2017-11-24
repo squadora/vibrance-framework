@@ -1,0 +1,26 @@
+/*
+==========================================================================
+    # PARALLAX
+==========================================================================
+*/
+@import "import.scss";
+
+.parallax {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: auto auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    @include transform-style(preserve-3d);
+    will-change: transform, top;
+}
+
+.parallax-layer {
+    position: relative;
+    overflow: hidden;
+    min-height: 1px;
+}

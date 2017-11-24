@@ -1,0 +1,92 @@
+/*
+==========================================================================
+    # TAB THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.tab-header {
+
+    background-color: $tab-header-bg-color;
+
+    &:not(.tab-bottom):not(.tab-left):not(.tab-right)::before {
+        border-bottom: $tab-header-top-border;
+    }
+
+    > * {
+        text-align: $tab-header-top-item-text-align;
+
+        > a {
+            padding: $tab-header-link-padding;
+            text-transform: $tab-header-link-text-transform;
+            line-height: $tab-header-link-line-height;
+            color: $tab-header-link-color;
+        }
+
+        &.active > a {
+            color: $tab-header-link-hover-color;
+            background-color: $tab-header-link-hover-bg-color;
+        }
+
+        &:hover > a {
+            color: $tab-header-link-active-color;
+            background-color: $tab-header-link-active-bg-color;
+        }
+
+        &.disabled {
+            color: $tab-header-link-disabled-color;
+            background-color: $tab-header-link-disabled-bg-color;
+        }
+
+    }
+
+    /* Tab Bottom */
+    &.tab-bottom {
+        
+        &::before {
+            border-top: $tab-header-bottom-border;
+        }
+
+        > * {
+            text-align: $tab-header-bottom-item-text-align;
+        }
+
+    }
+
+    /* Tab Left */
+    &.tab-left {
+
+        &::before {
+            border-right: $tab-header-left-border;
+        }
+
+        > * {
+            text-align: $tab-header-left-item-text-align;
+        }
+
+    }
+
+    /* Tab Right */
+    &.tab-right {
+
+        &::before {
+            border-left: $tab-header-right-border;
+        }
+
+        > * {
+            text-align: $tab-header-right-item-text-align;
+        }
+
+    }
+
+}
+
+.tab-content {
+    
+    background-color: $tab-content-bg-color;
+
+    > * {
+        padding: $tab-content-padding;
+    }
+
+}

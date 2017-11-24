@@ -1,0 +1,27 @@
+/*
+==========================================================================
+    # LABEL
+==========================================================================
+*/
+@import "import.scss";
+
+.label {
+    display: inline-block;
+    border-radius: $label-border-radius;
+    min-width: 1px;
+    padding: $label-padding;
+    height: $label-height;
+    line-height: $label-line-height;
+}
+
+.label:hover {
+    text-decoration: none;
+}
+
+.label.label-squared {
+    border-radius: $label-squared-border-radius;
+}
+
+.label.label-rounded {
+    border-radius: $label-rounded-border-radius;
+}

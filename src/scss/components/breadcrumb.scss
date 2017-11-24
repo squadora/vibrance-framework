@@ -1,0 +1,39 @@
+/*
+==========================================================================
+    # BREADCRUMB
+==========================================================================
+*/
+@import "import.scss";
+
+.breadcrumb {
+    @include reset-list();
+
+    li {
+        display: inline-block;
+    }
+
+    li:not(.disabled) a:hover {
+        text-decoration: none;
+    }
+
+    li:nth-child(n+2)::before {
+        font-family: FontAwesome;
+        content: "/";
+        display: inline-block;
+        margin: $breadcrumb-item-padding;
+    }
+
+    li.disabled a {
+        pointer-events: none;
+    }
+
+    &.breadcrumb-caret-divider > li:nth-child(n+2)::before {
+        font-family: FontAwesome;
+        content: "\f0da";
+    }
+
+    &.breadcrumb-angle-divider > li:nth-child(n+2)::before {
+        content: "\f105";
+    }
+
+}

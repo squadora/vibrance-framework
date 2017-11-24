@@ -1,0 +1,60 @@
+/*
+==========================================================================
+    # OFFCANVAS
+==========================================================================
+*/
+/*
+-----------------------------------------
+
+    # OFF CANVAS
+
+-----------------------------------------
+*/
+@import "import.scss";
+
+.offcanvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 300px;
+    background: #fff;
+    overflow-y: auto;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1000;
+    display: none;
+
+    .offcanvas-header {
+        padding: 20px 20px;
+        position: relative;
+
+        .offcanvas-title {
+            margin: 0;
+        }
+
+        .offcanvas-close {
+            height: 100%;
+            background: transparent;
+        }
+
+        .offcanvas-close-default {
+            position: absolute;
+            z-index: 11;
+            top: 0;
+            right: 0;
+            width: 60px;
+            padding: 0 10px;
+            border: none;
+            background: transparent;
+        }
+
+    }
+
+    .offcanvas-body {
+        padding: 20px 20px;
+    }
+
+}
+

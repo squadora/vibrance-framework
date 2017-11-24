@@ -1,0 +1,40 @@
+/*
+==========================================================================
+    # LIST
+==========================================================================
+*/
+@import "import.scss";
+
+.list {
+    list-style-type: none;
+
+    > * {
+        padding: $list-item-padding;
+    }
+    
+    &.list-bullet-square {
+        list-style-type: square;
+        padding-left: 15px;
+    }
+    
+    &.list-bullet-circle {
+        list-style-type: disc;
+        padding-left: 15px;
+    }
+    
+    &.list-bullet-decimal {
+        list-style-type: decimal;
+        padding-left: 15px;
+    }
+    
+    &.list-striped > * {
+        margin: 0px;
+        padding: 10px;
+    }
+    
+    .list-divider {
+        margin: $list-divider-margin;
+        padding: 0;
+    }
+
+}

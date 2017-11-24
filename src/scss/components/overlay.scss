@@ -1,0 +1,27 @@
+/*
+==========================================================================
+    # OVERLAY
+==========================================================================
+*/
+@import "import.scss";
+
+.overlay,
+.background-overlay {
+    position: absolute;
+    text-align: center;
+    color: $overlay-color;
+    background-color: $overlay-bg-color;
+}
+
+.overlay-inverse {
+    color: $overlay-inverse-color;
+    background-color: $overlay-inverse-bg-color;
+}
+
+.overlay.fullsize,
+.background-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

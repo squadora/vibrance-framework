@@ -1,0 +1,17 @@
+/*
+==========================================================================
+    # DROPDOWN THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.dropdown-default {
+    padding: $dropdown-padding;
+    background-color: $dropdown-bg-color;
+    border: $dropdown-border;
+
+    .nav {
+        min-width: $dropdown-nav-min-width;
+    }
+
+}

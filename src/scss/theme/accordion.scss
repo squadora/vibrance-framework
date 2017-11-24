@@ -1,0 +1,76 @@
+/*
+==========================================================================
+    # ACCORDION THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.accordion-default {
+
+    .accordion-title {
+        height: $accordion-title-height;
+        line-height: $accordion-title-line-height;
+        padding: $accordion-title-padding;
+        font-family: $accordion-title-font;
+        font-weight: $accordion-title-font-weight;
+        background-color: $accordion-title-bg-color;
+        color: $accordion-title-color;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $accordion-title-hover-bg-color;
+            color: $accordion-title-hover-color;
+        }
+
+        a,
+        a:hover {
+            color: inherit;
+        }
+
+    }
+
+    > *.active .accordion-title {
+        font-weight: $accordion-title-active-font-weight;
+        background-color: $accordion-title-active-bg-color;
+        color: $accordion-title-active-color;
+
+        &:hover {
+            background-color: $accordion-title-active-hover-bg-color;
+            color: $accordion-title-active-hover-color;
+        }
+
+    }
+
+    .accordion-content {
+        margin-top: 0px;
+        padding: $accordion-content-padding;
+        border: $accordion-content-border;
+        border-top: none;
+    }
+
+    > *.active .accordion-content {
+        border: $accordion-content-opened-border;
+        border-top: none;
+    }
+
+    &.accordion-text {
+
+        .accordion-title {
+            font-weight: $accordion-text-title-font-weight;
+            border-radius: 0px;
+            color: $accordion-text-title-color;
+
+            &:hover {
+                color: $accordion-text-title-hover-color;
+            }
+
+        }
+
+        > *.active .accordion-title {
+            font-weight: $accordion-text-title-active-font-weight;
+            color: $accordion-text-title-active-color;
+        }
+
+    }
+
+}

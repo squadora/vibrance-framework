@@ -1,0 +1,41 @@
+/*
+==========================================================================
+    # MODAL
+==========================================================================
+*/
+@import "import.scss";
+
+.modal {
+
+    .modal-wrapper {
+        background: $modal-wrapper-bg-color;
+
+        .modal-header {
+            position: relative;
+            padding: $modal-header-padding;
+            border-bottom: $modal-header-border-bottom;
+        }
+
+        .modal-close-default {
+            width: $modal-close-btn-width;
+            height: $modal-close-btn-height;
+            font-size: $modal-close-btn-font-size;
+            background-color: $modal-close-btn-bg-color;
+            color: $modal-close-btn-color;
+            z-index: 110 !important;
+            border: 0;
+        }
+
+        .modal-body {
+            padding: $modal-body-padding;
+        }
+        
+        .modal-footer {
+            padding: $modal-footer-padding;
+            border-top: $modal-footer-border-top;
+            text-align: $modal-footer-text-align;
+        }
+
+    }
+
+}

@@ -1,0 +1,85 @@
+/*
+==========================================================================
+    # TRANSITION
+==========================================================================
+*/
+@import "import.scss";
+
+.transition-layer {
+    overflow: hidden;
+}
+
+[class*="transition-"] {
+    @include transition(.3s ease-out)
+}
+
+/* ## Fade */
+.transition-fade {
+    opacity: 0;
+}
+
+.transition-layer:hover .transition-fade {
+    opacity: 1;
+}
+
+/* ## Top */
+.transition-fade-top {
+    opacity: 0;
+    @include transform(translateY(-100%));
+}
+
+.transition-layer:hover .transition-fade-top {
+    opacity: 1;
+    @include transform(translateY(0%));
+}
+
+/* ## Bottom */
+.transition-fade-bottom {
+    opacity: 0;
+    @include transform(translateY(100%));
+}
+
+.transition-layer:hover .transition-fade-bottom {
+    opacity: 1;
+    @include transform(translateY(0%));
+}
+
+/* ## Left */
+.transition-fade-left {
+    opacity: 0;
+    @include transform(translateX(-100%));
+}
+
+.transition-layer:hover .transition-fade-left {
+    opacity: 1;
+    @include transform(translateY(0%));
+}
+
+/* ## Right */
+.transition-fade-right {
+    opacity: 0;
+    @include transform(translateX(100%));
+}
+
+.transition-layer:hover .transition-fade-right {
+    opacity: 1;
+    @include transform(translateY(0%));
+}
+
+/* ## Zoom In */
+.transition-zoom-in {
+    @include transform(scale3d(1, 1, 1));
+}
+
+.transition-layer:hover .transition-zoom-in {
+    @include transform(scale3d(1.05, 1.05, 1.05));
+}
+
+/* ## Zoom out */
+.transition-zoom-out {
+    @include transform(scale3d(1.05, 1.05, 1.05));
+}
+
+.transition-layer:hover .transition-zoom-out {
+    @include transform(scale3d(1, 1, 1));
+}

@@ -1,0 +1,117 @@
+
+/*
+==========================================================================
+    # TAB
+==========================================================================
+*/
+@import "import.scss";
+
+.tab-header {
+    position: relative;
+    @include reset-list;
+
+    > * {
+        display: inline-block;
+
+        > a {
+            display: block;
+            border-bottom: 2px solid transparent;
+        }
+
+        &.disabled {
+            pointer-events: none;
+    
+            a {
+                color: inherit;
+            }
+        }
+
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    /* Tab Bottom */
+    &.tab-bottom {
+        
+        &::before {
+            border-bottom: none;
+            top: 0;
+            bottom: initial;
+            z-index: -1;
+        }
+
+        > * > a {
+            border-top: 2px solid transparent;
+            border-bottom: none;
+        }
+
+    }
+
+    /* Tab Left */
+    &.tab-left {
+
+        > * {
+            display: block;
+        }
+
+        &::before {
+            right: 0;
+            top: 0;
+            bottom: initial;
+            height: 100%;
+            z-index: -1;
+        }
+
+        > * > a {
+            border-right: 2px solid transparent;
+            border-top: none;
+            border-bottom: none;
+        }
+
+    }
+
+    /* Tab Right */
+    &.tab-right {
+
+        > * {
+            display: block;
+        }
+
+        &::before {
+            border-top: none;
+            border-bottom: none;
+            left: 0;
+            top: 0;
+            bottom: initial;
+            height: 100%;
+            z-index: -1;
+        }
+
+        > * > a {
+            border-left: 2px solid transparent;
+            border-top: none;
+            border-bottom: none;
+        }
+
+    }
+
+}
+
+.tab-content {
+    
+    > * {
+        display: none;
+    }
+
+    > *.active {
+        display: block;
+    }
+    
+}

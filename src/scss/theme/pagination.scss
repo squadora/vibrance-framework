@@ -1,0 +1,41 @@
+/*
+==========================================================================
+    # PAGINATION THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.pagination {
+
+    li {
+
+        a {
+            padding: $pagination-item-nav-padding;
+            color: $pagination-item-nav-color;
+    
+            &:hover{
+                color: $pagination-item-nav-hover-color;
+            }
+        
+        }
+
+        &.active a {
+            color: $pagination-item-nav-active-color;
+        }
+
+    }
+
+    .pagination-prev::before,
+    .pagination-next::before {
+        font-family: $pagination-item-nav-arrows-font;
+    }
+
+    .pagination-prev::before {
+        content: $pagination-item-nav-prev-content;
+    }
+    
+    .pagination-next::before {
+        content: $pagination-item-nav-next-content;
+    }
+
+}

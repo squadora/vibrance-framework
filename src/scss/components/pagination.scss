@@ -1,0 +1,26 @@
+/*
+==========================================================================
+    # PAGINATION
+==========================================================================
+*/
+@import "import.scss";
+
+.pagination {
+    @include reset-list;
+
+    li {
+        display: inline-block;
+        cursor: default;
+
+        &.disabled {
+            pointer-events: none;
+        }
+
+    }
+
+    .pagination-prev,
+    .pagination-next {
+        vertical-align: middle;
+    }
+
+}

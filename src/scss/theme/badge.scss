@@ -1,0 +1,18 @@
+/*
+==========================================================================
+    # BADGE THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.badge {
+    font-family: $badge-font;
+    font-size: $badge-font-size;
+    font-weight: $badge-font-weight;
+}
+
+.badge-default {
+    color: $badge-color;
+    background-color: $badge-bg-color;
+    border: $badge-border;
+}

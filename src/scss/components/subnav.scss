@@ -1,0 +1,23 @@
+/*
+==========================================================================
+    # SUBNAV
+==========================================================================
+*/
+@import "import.scss";
+
+.subnav {
+    @include reset-list();
+}
+
+.subnav > li {
+    display: inline-block;
+    padding-left: $subnav-item-padding-left;
+}
+
+.subnav > li a {
+    text-decoration: none;
+}
+
+.subnav li:first-child {
+    padding-left: 0px;
+}

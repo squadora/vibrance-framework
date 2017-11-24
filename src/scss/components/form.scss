@@ -1,0 +1,22 @@
+/*
+==========================================================================
+    # FORM
+==========================================================================
+*/
+@import "import.scss";
+
+form {
+    position: relative;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.merged-form {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}

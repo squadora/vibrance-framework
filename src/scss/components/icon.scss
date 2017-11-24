@@ -1,0 +1,50 @@
+/*
+==========================================================================
+    # ICON
+==========================================================================
+*/
+@import "import.scss";
+
+.icon-left {
+    margin-right: 5px;
+}
+
+.icon-right {
+    margin-left: 5px;
+}
+
+.icon {
+    
+    &.x12 {
+        font-size: 12px;
+    }
+
+    &.x14 {
+        font-size: 14px;
+    }
+    
+    &.x16 {
+        font-size: 16px;
+    }
+    
+    &.x18 {
+        font-size: 18px;
+    }
+    
+    &.x24 {
+        font-size: 24px;
+    }
+    
+    &.x32 {
+        font-size: 32px;
+    }
+    
+    &.x48 {
+        font-size: 48px;
+    }
+    
+    &.x64 {
+        font-size: 64px;
+    }
+    
+}

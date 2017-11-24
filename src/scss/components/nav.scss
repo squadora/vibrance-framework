@@ -1,0 +1,24 @@
+/*
+==========================================================================
+    # NAV
+==========================================================================
+*/
+@import "import.scss";
+
+.nav,
+.nav .nav-sub {
+    @include reset-list();
+}
+
+.nav > li {
+    padding: $nav-item-padding;
+}
+
+.nav > li a:hover {
+    text-decoration: none;
+}
+
+.nav > li.nav-divider {
+    margin: $nav-divider-margin;
+    padding: 0;
+}

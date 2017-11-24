@@ -1,0 +1,30 @@
+/*
+==========================================================================
+    # NAVBAR THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.navbar-nav li a,
+.navbar-nav li .button-text {
+    color: $navbar-nav-item-color;
+}
+
+.navbar-nav a:hover,
+.navbar-nav li:hover .button-text,
+.navbar-nav li.active a,
+.navbar-nav li.active .button-text {
+    color: $navbar-nav-highlight-color;
+}
+
+.navbar-nav li .button-text {
+    text-transform: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    vertical-align: baseline;
+}
+
+.navbar-nav li button.button-text {
+    cursor: default;
+}

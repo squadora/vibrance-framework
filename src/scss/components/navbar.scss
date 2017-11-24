@@ -1,0 +1,101 @@
+/*
+==========================================================================
+    # NAVBAR
+==========================================================================
+*/
+@import "import.scss";
+
+.navbar {
+    position: relative;
+    @include flexbox();
+    @include align-items(center);
+    height: $navbar-height;
+    line-height: $navbar-height;
+    padding: $navbar-padding;
+    width: 100%;
+
+    &.navbar-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .navbar-left,
+    .navbar-right,
+    .navbar-center {
+        @include flexbox();
+        @include align-items(center);
+    }
+
+    .navbar-left {
+        @include justify-content(flex-start);
+        margin-right: auto;
+    }
+    .navbar-center {
+        @include justify-content(center);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar-right {
+        @include justify-content(flex-end);
+        margin-left: auto;
+    }
+
+    > *:not(.navbar-center):not(.navbar-right):first-child {
+        margin-left: -$navbar-space;
+    }
+    
+    > *:not(.navbar-center):not(.navbar-left):last-child {
+        margin-right: -$navbar-space;
+    }
+
+}
+
+/* Navbar brand */
+.navbar-brand {
+    display: block;
+    padding-left: $navbar-space;
+    padding-right: $navbar-space;
+}
+
+/* Navbar item */
+.navbar-item {
+    @include flexbox();
+    @include align-items(center);
+    padding-left: $navbar-space;
+    padding-right: $navbar-space;
+}
+
+/* Navbar nav */
+.navbar-nav {
+    @include reset-list();
+    @include flexbox();
+
+    height: 100%;
+
+    > * {
+        position: relative;
+        height: 100%;
+
+        > * {
+            line-height: normal;
+        }
+
+        > a,
+        > button {
+            line-height: inherit;
+            height: 100%;
+        }
+
+    }
+
+}
+
+.navbar-nav > li > a {
+    display: block;
+    padding-left: $navbar-space;
+    padding-right: $navbar-space;
+}
+

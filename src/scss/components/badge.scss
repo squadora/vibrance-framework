@@ -1,0 +1,32 @@
+
+/*
+==========================================================================
+    # BADGE
+==========================================================================
+*/
+@import "import.scss";
+
+.badge {
+    display: inline-block;
+    border-radius: $badge-border-radius;
+    min-width: 1px;
+    padding: $badge-padding;
+    height: $badge-height;
+    line-height: $badge-line-height;
+}
+
+.badge:hover {
+    text-decoration: none;
+}
+
+.badge.badge-squared {
+    border-radius: $badge-squared-border-radius;
+}
+
+.badge.badge-rounded {
+    border-radius: $badge-rounded-border-radius;
+}
+
+.badge[data-caption]::after {
+    content: " " attr(data-caption);
+}

@@ -1,0 +1,15 @@
+/*
+==========================================================================
+    # SUBNAV THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.subnav li a {
+    color: $subnav-item-color;
+}
+
+.subnav a:hover,
+.subnav li.active a {
+    color: $subnav-highlight-color;
+}

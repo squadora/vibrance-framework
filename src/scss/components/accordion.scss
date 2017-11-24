@@ -1,0 +1,47 @@
+/*
+==========================================================================
+    # ACCORDION
+==========================================================================
+*/
+@import "import.scss";
+
+.accordion {
+    overflow: hidden;
+    @include reset-list();
+
+    > * {
+
+        margin-top: $accordion-item-margin;
+
+        &:first-of-type {
+            margin-top: 0px;
+        }
+
+        &:last-child .accordion-title {
+            border-bottom:none;
+        }
+
+        .accordion-title {
+
+            width: 100%;
+            display: inline-block;
+            @include transition(all linear 0.15s);
+ 
+            &.accordion-title:hover {
+                text-decoration: none;
+            }
+
+        }
+        
+        &.active .accordion-title:hover {
+            text-decoration: none;
+        }
+
+        .accordion-content {
+            display: none;
+            margin-top: $accordion-content-margin;
+        }
+
+    }
+
+}

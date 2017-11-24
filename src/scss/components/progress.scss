@@ -1,0 +1,30 @@
+
+/*
+==========================================================================
+    # PROGRESS
+==========================================================================
+*/
+@import "import.scss";
+
+.progress-bar {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    
+    .progression {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 0%;
+        height: 100%;
+
+        &:after {
+            content: " " attr(data-caption);
+            line-height: inherit;
+        }
+
+    }
+
+}

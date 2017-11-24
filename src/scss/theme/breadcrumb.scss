@@ -1,0 +1,30 @@
+/*
+==========================================================================
+    # BREADCRUMBS THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.breadcrumb {
+
+    li:not(.disabled) {
+    
+        a {
+            color: $breadcrumb-item-color;
+        }
+
+        a:hover {
+            color: $breadcrumb-item-hover-color;
+            text-decoration: none;
+        }
+    }
+
+    li:nth-child(n+2)::before {
+        color: $breadcrumb-item-color;
+    }
+
+    li.disabled a {
+        color: $breadcrumb-item-disabled-color;
+    }
+
+}

@@ -1,0 +1,27 @@
+/*
+==========================================================================
+    # NAV THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.nav-default li a {
+    color: $nav-item-color;
+}
+
+.nav-default a:hover,
+.nav-default li.active a {
+    color: $nav-highlight-color;
+}
+
+.nav > li.nav-divider {
+    border-bottom: $nav-divider-width solid $nav-divider-color; 
+}
+
+.nav-default .nav-header {
+    color: $nav-header-color;
+    font-weight: $nav-header-font-weight;
+    font-family: $heading-font;
+    font-size: $h6-font-size;
+    text-transform: $nav-header-text-transform;
+}

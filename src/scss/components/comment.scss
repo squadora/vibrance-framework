@@ -1,0 +1,63 @@
+/*
+==========================================================================
+    # COMMENT
+==========================================================================
+*/
+@import "import.scss";
+
+.comment-list {
+    display: inline-block;
+    @include reset-list();
+
+    ul {
+        margin-top: $comment-list-margin-top;
+        padding-left: $comment-list-reply-padding-left;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            padding-left: $comment-list-reply-padding-left-md;
+        }
+
+        @media screen and (max-width: $breakpoint-small) {
+            padding-left: $comment-list-reply-padding-left-sm;
+        }
+
+    }
+
+}
+
+.comment {
+
+    .comment-avatar,
+    .comment-header,
+    .comment-body {
+        position: relative;
+        min-height: 1px;
+    }
+
+    .comment-header {
+        display: inline-block;
+        width: 100%;
+        margin: $comment-header-margin;
+    }
+
+    .comment-avatar {
+        width: 100%;
+        max-width: 100px;
+        padding-right: $comment-avatar-padding-right;
+        float: left;
+    }
+
+    .comment-infos {
+        display: inline-block;
+        margin-top: $comment-infos-margin-top;
+    }
+
+    .comment-author {
+        display: block;
+    }
+
+    .comment-body {
+        margin-top: $comment-body-margin-top;
+    }
+    
+}

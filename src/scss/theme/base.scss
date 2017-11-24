@@ -1,0 +1,19 @@
+/*
+==========================================================================
+    # BASE THEME
+==========================================================================
+*/
+@import "import.scss";
+
+hr {
+    border-top: none;
+    border-bottom: 1px solid #eee;
+}
+
+.link-muted {
+    color: $muted-color;
+
+    &:hover {
+        color: $muted-hover;
+    }
+}

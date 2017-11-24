@@ -1,0 +1,57 @@
+/*
+==========================================================================
+    # CONTAINER
+==========================================================================
+*/
+@import "import.scss";
+
+.container {
+    position: relative;
+    width: $container-width-base;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $container-spacing;
+    padding-right: $container-spacing;
+}
+
+.container-large {
+    position: relative;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: $container-spacing;
+    padding-right: $container-spacing;
+}
+
+.container-expand {
+    position: relative;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 !important;
+}
+
+@media (min-width: $breakpoint-small) {
+    .container {
+        width: $container-width-sm;
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .container {
+        width: $container-width-md;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .container {
+        width: $container-width-lg;
+    }
+}
+
+@media (min-width: $breakpoint-xlarge) {
+    .container {
+        width: $container-width-xl;
+    }
+}

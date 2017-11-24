@@ -1,0 +1,80 @@
+/*
+==========================================================================
+    # SECTION
+==========================================================================
+*/
+@import "import.scss";
+
+.section {
+    position: relative;
+    padding: $section-spacing-auto;
+    overflow: hidden;
+
+    /* Background layer */
+    .background-layer:not(.parallax) {
+        position: absolute; 
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        @include background-cover;
+        
+        img,
+        video {
+            @include transform(translate(-50%, -50%));
+            display: block;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: auto;
+        }
+        
+        video {
+            width: 101%; /* Fix firefox white border left */
+        }
+
+        @media (max-width: $breakpoint-small) {
+            img,
+            video  {
+                width: 200%;
+            }
+        }
+
+    }
+
+}
+
+/* Spacing */
+
+.section.section-padding-off {
+    padding: $section-spacing-off;
+}
+
+/* auto sm */
+@media (max-width: $breakpoint-small) {
+    .section {
+        padding: $section-spacing-auto-xs;
+    }
+}
+
+.section.section-padding-xs {
+    padding: $section-spacing-xs;
+}
+
+.section.section-padding-sm {
+    padding: $section-spacing-sm;
+}
+
+.section.section-padding-md {
+    padding: $section-spacing-md;
+}
+
+.section.section-padding-lg {
+    padding: $section-spacing-lg;
+}
+
+.section.section-padding-xl {
+    padding: $section-spacing-xl;
+}

@@ -1,0 +1,22 @@
+/*
+==========================================================================
+    # TABLE
+==========================================================================
+*/
+@import "import.scss";
+
+.table {
+
+    border-collapse: $table-border-collapse;
+    border-spacing: $table-border-spacing;
+    width: $table-border-width;
+
+    th {
+        vertical-align: $table-border-th-vertical-align;
+    }
+
+    td {
+        vertical-align: $table-border-td-vertical-align;
+    }
+
+}

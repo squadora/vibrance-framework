@@ -1,0 +1,40 @@
+/*
+==========================================================================
+    # LABEL THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.label {
+    font-family: $label-font;
+    font-size: $label-font-size;
+    font-weight: $label-font-weight;
+    color: $label-primary-color;
+    background-color: $label-primary-bg-color;
+    border: $label-primary-border;
+
+    &.label-secondary {
+        color: $label-secondary-color;
+        background-color: $label-secondary-bg-color;
+        border: $label-secondary-border;
+    }
+    
+    &.label-warning {
+        color: $label-warning-color;
+        background-color: $label-warning-bg-color;
+        border: $label-warning-border;
+    }
+    
+    &.label-danger {
+        color: $label-danger-color;
+        background-color: $label-danger-bg-color;
+        border: $label-danger-border;
+    }
+    
+    &.label-success {
+        color: $label-success-color;
+        background-color: $label-success-bg-color;
+        border: $label-success-border;
+    }
+
+}

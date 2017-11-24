@@ -1,0 +1,22 @@
+/*
+==========================================================================
+    # CARD THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.card-default {
+    background-color: $card-bg-color;
+    border: $card-border;
+
+    .card-header {
+        border-bottom: $card-header-border-bottom;
+    }
+
+    .card-footer {
+        border-top: $card-footer-border-bottom;
+    }
+
+}
+
+

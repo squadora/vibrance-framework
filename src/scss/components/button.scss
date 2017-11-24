@@ -1,0 +1,127 @@
+/*
+==========================================================================
+    # BUTTON
+==========================================================================
+*/
+@import "import.scss";
+
+.button {
+
+    &.button-text {
+        display: inline-block;
+        padding: 0px;
+        border: none;
+        line-height: inherit;
+        background: transparent;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    @include user-select(none);
+    @include transition(.1s ease-in-out);
+    @include transition-property(all);
+    display: inline-block;
+    margin-bottom: 0;
+    padding: $button-padding;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    background-image: none;
+    white-space: nowrap;
+    border-radius: $button-border-radius;
+    border: $button-border;
+    outline: none;
+    cursor: pointer;
+
+    &.button-squared {
+        border-radius: 0px;
+    }
+
+    &.button-rounded {
+        border-radius: 50px;
+    }
+
+    &.button-small {
+        line-height: $button-small-line-height;
+        padding: $button-small-padding;
+    }
+
+    &.button-large {
+        line-height: $button-large-line-height;
+        padding: $button-large-padding;
+    }
+
+    &:hover {
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &[disabled],
+    &.button-disabled {
+        pointer-events: none;
+    }
+
+}
+
+/* Button group */
+.button-group {
+    position: relative;
+    @include inline-flex();
+    vertical-align: middle;
+}
+
+.button-group {
+    
+    .button {
+        border-radius: 0px;
+    }
+
+    .button-bordered:not(:first-child) {
+        border-radius: 0px;
+        margin-left: -$button-border-width;
+    }
+
+    .button:first-child {
+        border-top-left-radius: $button-border-radius;
+        border-bottom-left-radius: $button-border-radius;
+    }
+
+    .button:last-child {
+        border-top-right-radius: $button-border-radius;
+        border-bottom-right-radius: $button-border-radius;
+    }
+
+}
+
+.button-group.button-squared {
+
+    .button:first-child {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .button:last-child {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+}
+
+.button-group.button-rounded {
+
+    .button:first-child {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .button:last-child {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+}

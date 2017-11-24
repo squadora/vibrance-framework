@@ -1,0 +1,19 @@
+/*
+==========================================================================
+    # DESCRIPTION LIST
+==========================================================================
+*/
+@import "import.scss";
+
+.description-list dt {
+    text-transform: uppercase;
+}
+
+.description-list dd {
+    margin: $description-list-dd-margin;
+    padding: $description-list-dd-padding;
+}
+
+.description-list.description-list-divider dd:not(:last-child) {
+    border-bottom: $description-list-divider-border-bottom;
+}

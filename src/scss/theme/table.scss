@@ -1,0 +1,41 @@
+/*
+==========================================================================
+    # TABLE THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.table {
+    
+    text-align: $table-text-align;
+
+    th {
+        padding: $table-th-padding;
+        font-weight: $table-th-font-weight;
+        text-transform: $table-th-text-transform;
+        text-align: inherit; /* Fix IE */
+    }
+
+    td {
+        padding: $table-td-padding;
+    }
+
+    &.table-divider > tr:not(:first-child), 
+    &.table-divider > :not(:first-child) > tr, 
+    &.table-divider > :first-child > tr:not(:first-child) {
+        border-top: $table-divider-border;
+    }
+
+    &.table-divider tbody tr:last-child {
+        border-bottom: $table-divider-border;
+    }
+
+    &.table-striped tbody tr:nth-child(2n+1) {
+        background-color: $table-striped-bg-color;
+    }
+
+    &.table-hover tbody tr:hover {
+        background-color: $table-hover-bg-color;
+    }
+
+}

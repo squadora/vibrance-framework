@@ -1,0 +1,178 @@
+/*
+==========================================================================
+    # CARD
+==========================================================================
+*/
+@import "import.scss";
+@import "badge.scss";
+
+.card {
+    position: relative;
+    border-radius: $card-border-radius;
+    
+    @include transition(box-shadow);
+    @include transition-duration(.1s);
+    @include transition-timing-function(ease-in-out);
+
+    .card-header {
+        padding: $card-header-padding;
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &.card-body {
+        padding: $card-body-padding;
+        
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+        &.card-small {
+            padding: $card-small-body-padding;
+        }
+
+        &.card-large {
+            padding: $card-large-body-padding;
+        }
+
+    }
+
+    .card-body {
+
+        padding: $card-body-padding;
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+        &.card-small {
+            padding: $card-small-body-padding;
+        }
+
+        &.card-large {
+            padding: $card-large-body-padding;
+        }
+
+    }
+    
+    .card-footer {
+        padding: $card-footer-padding;
+
+        > a:nth-child(n+2),
+        > button:nth-child(n+2) {
+            margin-left: $card-footer-item-margin-left;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &.card-squared {
+        border-radius: 0;
+    }
+
+    &.card-rounded {
+        border-radius: $card-rounded-radius;
+    }
+
+    &.card-small {
+        
+        .card-header {
+            padding: $card-small-header-padding;
+        }
+        
+        .card-body {
+            padding: $card-small-body-padding;
+        }
+    
+        .card-footer {
+            padding: $card-small-footer-padding;
+        }
+    
+    }
+
+    &.large {
+        
+        .card-header {
+            padding: $card-large-header-padding;
+        }
+        
+        .card-body {
+            padding: $card-large-body-padding;
+        }
+    
+        .card-footer {
+            padding: $card-large-footer-padding;
+        }
+    
+    }
+
+    &.card-horizontal {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+}
+
+.card-media-left,
+.card-media-right {
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    height: 100%;
+    @include background-cover;
+    @include transform(translateY(-50%));
+}
+
+.card-media-left {
+    float: left;
+    left: 0;
+}
+
+.card-media-left + div {
+    float: right;
+}
+
+.card-media-right {
+    float: right;
+    right: 0;
+}
+
+@media (max-width: $breakpoint-medium) {
+    .card-media-left,
+    .card-media-right {
+        position: relative;
+        top: 0%;
+        @include transform(translateY(0%));
+    }
+}
+
+.card-media-left img,
+.card-media-right img {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.card-media-left + .card-body {
+    float: right;
+}
+
+.card-media-right + .card-body {
+    float: left;
+}
+
+.card-badge {
+    @extend .badge;
+    @include offset-position($card-badge-position-offsetY, $card-badge-position-offsetX);
+    z-index: 1;
+}

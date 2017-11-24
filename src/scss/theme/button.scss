@@ -1,0 +1,86 @@
+/*
+==========================================================================
+    # BUTTON THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.button {
+    font-family: $heading-font;
+    font-weight: $button-font-weight;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    text-align: $button-text-align;
+}
+
+.button.button-default {
+    border: $btn-border;
+    background-color: $btn-bg-color;
+    color: $btn-color;
+}
+
+.button.button-default:not(.disabled):hover {
+    border: $btn-hover-border;
+    background-color: $btn-hover-bg-color;
+    color: $btn-hover-color;
+}
+
+/* Button bordered */
+.button.button-bordered {
+    border: $btn-bordered-border;
+    background-color: $btn-bordered-bg-color;
+    color: $btn-bordered-color;
+}
+
+.button.button-bordered:not(.button-disabled):hover {
+    border: $btn-bordered-hover-border;
+    background-color: $btn-bordered-hover-bg-color;
+    color: $btn-bordered-hover-color;
+}
+
+/* Button primary */
+.button.button-primary {
+    border: $btn-primary-border;
+    background-color: $btn-primary-bg-color;
+    color: $btn-primary-color;
+}
+
+.button.button-primary:not(.button-disabled):hover {
+    border: $btn-primary-hover-border;
+    background-color: $btn-primary-hover-bg-color;
+    color: $btn-primary-hover-color;
+}
+
+/* Button secondary */
+.button.button-secondary {
+    border: $btn-secondary-border;
+    background-color: $btn-secondary-bg-color;
+    color: $btn-secondary-color;
+}
+
+.button.button-secondary:not(.button-disabled):hover {
+    border: $btn-secondary-hover-border;
+    background-color: $btn-secondary-hover-bg-color;
+    color: $btn-secondary-hover-color;
+}
+
+/* Button danger */
+.button.button-danger {
+    border: $btn-danger-border;
+    background-color: $btn-danger-bg-color;
+    color: $btn-danger-color;
+}
+
+.button.button-danger:not(.button-disabled):hover {
+    border: $btn-danger-hover-border;
+    background-color: $btn-danger-hover-bg-color;
+    color: $btn-danger-hover-color;
+}
+
+/* Button disabled */
+.button.button-default.button-disabled
+button.button.button-default[disabled] {
+    border: $btn-disabled-border;
+    background-color: $btn-disabled-bg-color;
+    color: $btn-disabled-color;
+}

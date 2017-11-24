@@ -1,0 +1,33 @@
+/*
+==========================================================================
+    # LIST THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.list {
+    @include reset-list();
+
+    .list {
+        padding-left: 40px;
+    }
+    
+    .list-divider {
+        border-bottom: $list-divider-width solid $list-divider-color; 
+    }
+    
+    .list-header {
+        color: $list-header-color;
+        font-weight: $list-header-font-weight;
+        font-family: $heading-font;
+        font-size: $h6-font-size;
+        text-transform: $list-header-text-transform;
+    }
+    
+    &.list-striped > *:nth-of-type(2n+1) {
+        background-color: #F5F5F5;
+        border-top: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+    }
+
+}

@@ -1,0 +1,22 @@
+/*
+==========================================================================
+    # LIGHTBOX THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.win-lightbox {
+
+    background: $lightbox-bg-color;
+    color: $lightbox-color;
+
+    .lightbox-close-bar {
+        background-color: $lightbox-close-bar;
+
+        .lightbox-close {
+            color: $lightbox-close-color;
+        }
+
+    }
+
+}

@@ -1,0 +1,146 @@
+/*
+==========================================================================
+    # grid
+==========================================================================
+*/
+@import "import.scss";
+
+.grid {
+
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include align-items(start);
+
+    
+    /*
+    ==========================================================================
+        # SPACING
+    ==========================================================================
+    */
+
+    &.grid-spacing-off {
+        
+        margin-left: 0;
+        margin-right: 0;
+
+        .column {
+            padding: 0;
+        }
+    
+    }
+
+    > .column {
+
+        padding-left: $grid-spacing;
+        padding-right: $grid-spacing;
+
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        
+        &.grid-spacing-medium {
+
+            > .column {
+        
+                padding-left: $grid-spacing-medium;
+                padding-right: $grid-spacing-medium;
+        
+            }
+
+        }
+        
+        &.grid-spacing-large {
+
+            > .column {
+        
+                padding-left: $grid-spacing-large;
+                padding-right: $grid-spacing-large;
+        
+            }
+
+        }
+
+    }
+
+    &.grid-spacing-off {
+
+        margin-left: 0;
+        margin-right: 0;
+    
+        > .column {
+    
+            padding-left: 0;
+            padding-right: 0;
+    
+        }
+
+    }
+
+    /*
+    ==========================================================================
+        # ALIGNMENT
+    ==========================================================================
+    */
+
+    &.grid-align-top {
+        @include align-items(start);
+    }
+    
+    &.grid-align-center {
+        @include align-items(center);
+    }
+    
+    &.grid-align-bottom {
+        @include align-items(flex-end);
+    }
+
+}
+
+/*
+==========================================================================
+    # CONTAINER GRID SPACING
+==========================================================================
+*/
+.container {
+    
+    .grid {
+
+        &.grid-spacing-off {
+
+            margin-left: 0;
+            margin-right: 0;
+        
+            > .column {
+        
+                padding-left: 0;
+                padding-right: 0;
+        
+            }
+
+        }
+
+        /* default spacing */
+        margin-left: -$grid-spacing;
+        margin-right: -$grid-spacing;
+
+        @media (min-width: $breakpoint-medium) {
+            
+            &.grid-spacing-medium {
+    
+                margin-left: -$grid-spacing-medium;
+                margin-right: -$grid-spacing-medium;
+    
+            }
+            
+            &.grid-spacing-large {
+    
+                margin-left: -$grid-spacing-large;
+                margin-right: -$grid-spacing-large;
+            
+            }
+    
+        }
+
+    }
+
+}

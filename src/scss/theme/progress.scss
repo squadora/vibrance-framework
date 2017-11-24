@@ -1,0 +1,28 @@
+/*
+==========================================================================
+    # PROGRESS BAR THEME
+==========================================================================
+*/
+@import "import.scss";
+
+.progress-bar {
+    height: $progress-bar-height;
+    border-radius: $progress-bar-border-radius;
+    background-color: $progress-bar-bg-color;
+
+    &.squared {
+        border-radius: $progress-bar-squared-border-radius;
+    }
+
+    &.rounded {
+        border-radius: $progress-bar-rounded-border-radius;
+    }
+
+    .progression {
+        font-size: $progress-bar-progression-font-size;
+        background-color: $progress-bar-progression-bg-color;
+        text-align: $progress-bar-progression-text-align;
+        color: $progress-bar-progression-color;
+    }
+
+}

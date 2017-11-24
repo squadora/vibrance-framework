@@ -3,20 +3,20 @@
 
 Start by downloading Vibrance Framework for free if you haven't already done so. The package contains the CSS and Javascript files, minified and unminified. Documentation and source files are not included.
 
-<a href="" class="button button-primary"><i class="fa fa-download icon-left"></i> Download Vibrance Framework</a>
+<a href="https://github.com/squadora/vibrance-framework" class="button button-primary"><i class="fa fa-download icon-left"></i> Download Vibrance Framework</a>
 
 ## Source Code
 
 You can also download the source files that includes Sass, Javascript, test files and associated documentation.
 
-<a href="" class="button button-bordered"><i class="fa fa-download icon-left"></i> Download Source Code</a>
+<a href="https://github.com/squadora/vibrance-framework" class="button button-bordered"><i class="fa fa-download icon-left"></i> Download Source Code</a>
 
 ## GitHub Repository
 
 You can clone the repository to get all sources files and build scripts.
 
 ```
-git clone git://github.com/squadora-systems/vibrance-framework.git
+git clone git://github.com/squadora/vibrance-framework.git
 ```
 
 ## Npm

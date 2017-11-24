@@ -30,7 +30,7 @@ git clone git://github.com/squadora/vibrance-framework.git
 
 ## Documentation
 
-You can found the [online documentation here](http://systems.squadora.com/vibrance/framework).
+You can found the [online documentation here](http://systems.squadora.com/vibrance/framework/docs/).
 
 ---
 

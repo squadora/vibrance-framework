@@ -10,7 +10,7 @@ You can choose from the following options to get Vibrance Framework.
 
 ### Manually
 
-You can download the latest release with pre-built CSS and JS.
+You can [download the latest release](https://github.com/squadora/vibrance-framework/archive/v1.0.0.zip) with pre-built CSS and JS.
 
 ### NPM
 

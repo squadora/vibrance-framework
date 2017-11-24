@@ -3,7 +3,7 @@
 
 Start by downloading Vibrance Framework for free if you haven't already done so. The package contains the CSS and Javascript files, minified and unminified. Documentation and source files are not included.
 
-<a href="https://github.com/squadora/vibrance-framework" class="button button-primary"><i class="fa fa-download icon-left"></i> Download Vibrance Framework</a>
+<a href="https://github.com/squadora/vibrance-framework/archive/v1.0.0.zip" class="button button-primary"><i class="fa fa-download icon-left"></i> Download Vibrance Framework</a>
 
 ## Source Code
 

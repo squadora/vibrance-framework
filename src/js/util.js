@@ -40,6 +40,12 @@ Util.prototype.setPosition = function( e1, e2, position ) {
 
             }
 
+            e1.removeClass( 'dropdown-overflow' );
+
+            if ( parseInt( e1.css('left') ) < 0 || parseInt( e1.css('right') ) < 0 || parseInt( e1.css('top') ) < 0 ) {
+                e1.addClass( 'dropdown-overflow' );
+            }
+
         },
 
         'bottom-center': function() {

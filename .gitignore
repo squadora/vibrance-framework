@@ -1,0 +1,14 @@
+/dist/*
+!/dist/css/
+/dist/css/*
+!/dist/css/vibrance-framework.css
+!/dist/css/vibrance-framework.min.css
+!/dist/css/colors.css
+!/dist/css/colors.min.css
+!/dist/js/
+/dist/js/*
+!/dist/js/vibrance-framework.js
+!/dist/js/vibrance-framework.min.js
+/node_modules
+/tests/assets/*
+.DS_Store
